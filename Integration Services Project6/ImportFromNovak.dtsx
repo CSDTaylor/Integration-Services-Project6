@@ -1,0 +1,3074 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/17/2018 6:15:27 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CTSURFACEPRO5"
+  DTS:CreatorName="CTSURFACEPRO5\User1"
+  DTS:DTSID="{2F04CDB7-0CAB-4DBD-808F-AFF22432FDA7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.107"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ImportFromNovak"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{587E86A3-E142-4A5C-A21F-BE8C55F33FB1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DC05BD82-5205-4EFA-AAF4-E8F5C68D534E}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\User1\source\repos\CSDTaylor\Integration-Services-Project4\import errors.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="created"
+              DTS:DTSID="{07AE6612-775D-4D96-BB4C-B6F74DCE6A7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="deleted"
+              DTS:DTSID="{A2C631A7-3951-4718-AD3B-3BF6D9B307CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{599DF77C-2E5A-4E51-AF9F-EF8FA7F5244E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__1hourTaxReview"
+              DTS:DTSID="{01093928-FD54-47B9-ABB3-73D71A5768B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__2016GPPProject"
+              DTS:DTSID="{8E779E4E-2F77-4E2A-8C82-65FEBB4349F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__30MinMidYearReview"
+              DTS:DTSID="{0148CBF3-C2D6-4007-BD5B-1F4E0407C681}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__30MinTaxForecastSession"
+              DTS:DTSID="{5AE40B44-C713-4307-9DF9-DE2C57392B2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__30MinTaxReviewSession"
+              DTS:DTSID="{183B6181-4E92-4BFC-8FDF-69B5C5102790}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__30MinuteLink"
+              DTS:DTSID="{71EF4F1B-C4F7-432C-9EA6-14B87B3E137A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__30MinYearEndReview"
+              DTS:DTSID="{CBFBA1F2-DEA2-4813-A13D-47A710B4882A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__60MinuteSession"
+              DTS:DTSID="{A14FBE9F-F774-4A2A-B96E-CF1CB2854F31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__acceptall"
+              DTS:DTSID="{D49A1E93-DF96-4E67-96B4-917B57EFF3A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__AppointmentCoreContactID"
+              DTS:DTSID="{8397A64E-9648-401C-BA62-449B817522FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ApptCoreDate"
+              DTS:DTSID="{3870C92C-45A3-402E-AE7D-CA95B4FEE7BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ApptCoreTime"
+              DTS:DTSID="{AEC198F9-88C6-48A3-B313-237A4F83F14E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ApptDetailsInstructions"
+              DTS:DTSID="{209D2F31-07C2-44FE-9A75-0FCA7098F48B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__CaptiveInsuranceLink"
+              DTS:DTSID="{FB3EC9A8-BE28-4C60-B948-07779A4321B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ConEaseWireAmount"
+              DTS:DTSID="{0D6BF0E3-154B-4D1B-9558-0AA9F65B0A70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ConeaseWireamount2017"
+              DTS:DTSID="{1AD0F055-632C-4E53-9BAF-13A84980D133}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ContactsTaxReturnPassword"
+              DTS:DTSID="{B16A87A4-6138-441F-B393-9AB5C9C97018}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__CorporateKitLink"
+              DTS:DTSID="{6B6C7B2F-588B-436E-BBE5-3B360FC1B279}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__CostSegregationLink"
+              DTS:DTSID="{0B6104E0-44CE-472A-B051-6BFB248FBD6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__DIAppbystate0"
+              DTS:DTSID="{675B7D04-1F35-4286-80B4-36F956DE19C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__DiscoveryCallScheduleLink"
+              DTS:DTSID="{60375C76-0EF6-4358-B13D-2F20B39C9CC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__Documentation"
+              DTS:DTSID="{B40D868C-4E9C-42A3-A22C-3FBFE0056124}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__EmploymentStatus2"
+              DTS:DTSID="{00A466A8-552A-4C94-8ECE-BA90E3A76EAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__EntityStructuringLink0"
+              DTS:DTSID="{DB3896D9-E53D-470C-B87B-C339E53DEEA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__EventName"
+              DTS:DTSID="{42EEAA09-3C48-48B3-8779-AE81B0D32B57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ExamCompletedDate"
+              DTS:DTSID="{1AB53E5F-05BE-4B74-A337-064D1630E03C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__FinanceKPI"
+              DTS:DTSID="{6480D826-065F-4903-927E-22C9A59AC895}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__FinancialPlanOnHoldFollowUpDate"
+              DTS:DTSID="{FC5E59EC-F839-4B82-BF6F-6972A5DC7049}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__FundingEstimate"
+              DTS:DTSID="{16315AC7-D227-419F-977A-9BE78C2E7684}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__GeneralAdvanceStrategies"
+              DTS:DTSID="{D12F97E0-5E25-426F-BB6F-07EAFD20BDCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__GetStartedDocId"
+              DTS:DTSID="{E395CA7F-B0D3-4151-A893-CC134179AF95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__GoogleDrive"
+              DTS:DTSID="{ED8BB67C-0D1A-4556-BABF-21081FF72BB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__GPPCallScheduleLink"
+              DTS:DTSID="{9BAD34A4-9CAA-43A2-8EF8-A5F87587A79A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__GPPUnits"
+              DTS:DTSID="{0DE089F3-71C5-44DE-866F-96C6FAF79DBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__GraniteProjectName"
+              DTS:DTSID="{19080C3B-AE64-4B62-8CE6-E75C40A34314}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__GraniteWireAmount"
+              DTS:DTSID="{41E03FB9-C874-4C8C-9985-A942616B960A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__HistoricProjectName"
+              DTS:DTSID="{1B9586C8-D26A-4E23-8EBA-2305B0798031}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__IncomeProtectionExamDate"
+              DTS:DTSID="{A48B40CF-44DC-48AE-AAB7-036832FA6C39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__IncomeProtectionExpectedRevenue"
+              DTS:DTSID="{A4C2845A-060F-4046-8A4A-74BD34AE532E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__IndustryTitle"
+              DTS:DTSID="{ABDE5966-4771-4FE0-A7CF-3017A4B00B7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__Invalid"
+              DTS:DTSID="{F3678007-FE74-48F7-8616-4A34D9EB277F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__InvestmentProgramOnHoldFollowUpDate"
+              DTS:DTSID="{10BB2CBC-6230-4472-891D-B1BE97FBE64E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LandConservation"
+              DTS:DTSID="{D20C52E0-5091-4035-9119-3452906BA1C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LastPaymentRenew"
+              DTS:DTSID="{39673BC8-0957-483F-9114-148157A6D539}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LSVTAccountStatus"
+              DTS:DTSID="{2BAAE695-87F8-4024-8AA6-973575B45683}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LSVTCallName"
+              DTS:DTSID="{481B0358-65CE-4849-B440-DBE35999E860}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LSVTContentRole"
+              DTS:DTSID="{98047771-6156-45C6-B8BB-2134C87800BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LSVTCurrentProgram"
+              DTS:DTSID="{87DF0C69-D9AB-4C6B-BEEC-F8093DE72F30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LSVTLocationName"
+              DTS:DTSID="{97571EAF-5DE5-474C-ACE4-9547B39D957A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__LSVTUserID"
+              DTS:DTSID="{1D8E14EB-9DDF-45AE-9308-65347CF051A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__Message"
+              DTS:DTSID="{6601FEED-CE0F-4595-8975-4432DB00F110}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__MidYearBusinessReview"
+              DTS:DTSID="{54AF55BE-F7C0-4847-B7CE-05480C8345B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__NextPaymentAmount0"
+              DTS:DTSID="{2731DC98-5537-460B-A57C-1D2C9D3FE9FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__NextPaymentDue0"
+              DTS:DTSID="{0261B6B9-458B-48E4-A752-21B40F22865E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__NextPaymentType"
+              DTS:DTSID="{7C261649-4829-465F-99E5-F739F2507ADA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__NIGODetails"
+              DTS:DTSID="{78A84D21-ECE0-4707-B274-FAB52C21C21A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__noemail"
+              DTS:DTSID="{F413293E-BFD3-4E73-BA8D-4E2490DD3F01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__NYLExpectedRevenue"
+              DTS:DTSID="{4EAF0CB7-99F4-4EA4-9D98-5D9F7ED26588}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__OrderDate"
+              DTS:DTSID="{BF6D2A08-1EF8-4624-BB54-B00816FC2357}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__OriginalSalesOwner"
+              DTS:DTSID="{A903411A-5C35-4728-A346-C509CE8F2A80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__OriginalSalesOwnerEmail0"
+              DTS:DTSID="{138B41BA-3DD8-4DAF-B87D-D963E31D5EEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__OriginalTaxProAssigned0"
+              DTS:DTSID="{BAA5643F-DF80-46AE-91B3-431174AD5C78}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__OriginalTaxProEmail"
+              DTS:DTSID="{196527DD-E1B7-4EA8-8642-755F18EA6055}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__OSJSignOff"
+              DTS:DTSID="{95742666-82BE-4267-AEBD-E6BE23DC0450}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PBwMarkScott"
+              DTS:DTSID="{0DE9F31F-86CB-480E-8770-08A65104AE95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PCCallScheduleLink"
+              DTS:DTSID="{7BDEF773-5281-4237-90F1-9C00169F68FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PCScheduledDate0"
+              DTS:DTSID="{418F3335-702A-4B47-929A-F034A28DABA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PlusThisSalesCheckinNotes"
+              DTS:DTSID="{146C7A1C-7690-4524-889D-9F9667386A24}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PlusThisTaxProServiceNotes"
+              DTS:DTSID="{AB20BADD-63F6-4541-9FCB-45B74A6188DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PlusThisUpdateLink"
+              DTS:DTSID="{2B08022F-9D80-4315-9CD6-21ABB3B3C29F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PolicyIssueDate"
+              DTS:DTSID="{41FC1285-B1EE-4594-A1CD-FE3BB0E59799}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PremiumInvestment"
+              DTS:DTSID="{FDC80281-D268-4BFD-8443-092DBDD1B4B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PrePCBookingLink"
+              DTS:DTSID="{345C66A7-D879-41C2-B376-3F827D5CCD37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PrivateBankingAnnualReview"
+              DTS:DTSID="{06462416-7F12-4DF7-9EA4-3F6CCE3FD0FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PrivatebankingExamDate"
+              DTS:DTSID="{3F158135-268E-4CB5-A71F-B3AFEFFDFB92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PrivatebankingLink"
+              DTS:DTSID="{1AE70AD2-8B33-4375-AD27-90C01143114C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__PrivateBankingMofU"
+              DTS:DTSID="{E20197D9-7138-4DAC-952B-BBA78775FAAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SalesAppointmentlink"
+              DTS:DTSID="{06429684-24BD-48F5-A99C-781E90A5FD51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SalesCallBackDate"
+              DTS:DTSID="{B77A30EA-5F8C-4A7A-895B-8405FC95B4B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SalesConsultationLink"
+              DTS:DTSID="{289019E7-441A-4E4A-8697-58618E5944D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SalesDocsFollowUpDate"
+              DTS:DTSID="{82F8049F-FFF6-49E3-A850-15831C73511B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__ScoreCardLink"
+              DTS:DTSID="{6E4E8E3B-9B9E-4102-9CBF-F0D98B04D490}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SubDocsCallLink"
+              DTS:DTSID="{09351D8F-7967-4C49-BCE1-C7BA85E1EFB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SubDocsCallScheduledDate"
+              DTS:DTSID="{12858A74-EC5A-4C71-8BFD-CAE83FB36280}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SubmittoDocupaste"
+              DTS:DTSID="{969EF5B7-3D47-432E-8063-CC434F183BD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SubscriptionDoccomplete"
+              DTS:DTSID="{7B36105D-49D6-4958-AEEF-C904C4FE0961}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SubscriptionDocument"
+              DTS:DTSID="{3312AFD5-A606-444F-ABE2-BAF9BA14433E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__SurveyCategory"
+              DTS:DTSID="{6BBC1E9E-0E41-4B8A-9E9D-6B9382709B65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__TaxForecastLink"
+              DTS:DTSID="{F72FF046-6DCB-47C4-A631-9E683E4F336C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__TaxReturnpasswordscont"
+              DTS:DTSID="{FA61C2C1-A537-4D12-B0AC-EF071B77EFC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__TSACEQuestion"
+              DTS:DTSID="{1A06BDD1-A0A3-4B3A-BF0D-1A8714ED4BA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__Typeofcall"
+              DTS:DTSID="{E6B61F6B-A663-425D-9C1F-58CE4E610E5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__Unknown"
+              DTS:DTSID="{0B342709-10F5-499E-99CD-19DA3AB9159D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__Valid"
+              DTS:DTSID="{E4D6F965-835E-4E4E-97B1-591C8068FF38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__WebinarComplete"
+              DTS:DTSID="{84DFF03E-777E-4FCA-B311-00886934726A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__WebinarJoinLink"
+              DTS:DTSID="{7B97E018-C3F4-48EF-90F9-98DF48DC67F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__WebinarScheduledDate"
+              DTS:DTSID="{98C2464B-B69F-45B5-9CC7-EF09DAE7FEE2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__WebinarScheduledTime"
+              DTS:DTSID="{7F27628B-8E7B-44AC-BAA4-844E56BE4BE7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__WelcomeCallScheduleLink"
+              DTS:DTSID="{EFA8A8CD-9F95-49E9-9216-6FECFA10CA0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__WireReceived"
+              DTS:DTSID="{B4992721-39F1-497A-A168-8BC44675D5CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf__YearEndReviewSession"
+              DTS:DTSID="{8BFEF441-D472-4578-84C4-F02448AE6540}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_AccountId"
+              DTS:DTSID="{3B7A274A-42D1-4D20-BD49-5FC839E7B522}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Address1Type"
+              DTS:DTSID="{A321AC5B-7460-4144-90FE-931D8FCE5962}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Address2Street1"
+              DTS:DTSID="{0AF0EBC8-11F7-410C-8889-9FAB21904F11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Address2Street2"
+              DTS:DTSID="{E20DC7B2-5DDB-4885-8DE1-F0A4F61F691A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Address2Type"
+              DTS:DTSID="{86AEF4BD-2700-4CBC-86CF-4527A15CD9DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Address3Street1"
+              DTS:DTSID="{EAFEBA7A-7968-4B46-B88F-30DFF2ECA5BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Address3Street2"
+              DTS:DTSID="{F65AF55E-936A-44F8-ACD5-0EBAACAC44AD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Address3Type"
+              DTS:DTSID="{738D6A39-FB3B-41DA-906A-9FD7167DE1F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Anniversary"
+              DTS:DTSID="{67C65B29-8CDA-47CA-A53E-C39141E64ACD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_AssistantName"
+              DTS:DTSID="{6078946E-DD0A-4513-B7C3-5E0F705004A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_AssistantPhone"
+              DTS:DTSID="{FA447C77-F7FE-4A36-9621-910EFD5F1B37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_BillingInformation"
+              DTS:DTSID="{0F998B5F-366A-4A4A-8120-966B994B7D4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Birthday"
+              DTS:DTSID="{DBA5B9E3-3D89-446A-AF95-790B6D4ABC5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_City"
+              DTS:DTSID="{72A21510-EADE-43F7-87C5-2CD25B8F4A14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_City2"
+              DTS:DTSID="{693B1151-6867-4E3C-B96F-69EAC0C1796E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_City3"
+              DTS:DTSID="{A3A7B191-3FF4-4866-86DF-7D79407CBFD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Company"
+              DTS:DTSID="{2A3C8743-6FBA-4049-929C-46419110CAA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_CompanyID"
+              DTS:DTSID="{7D2ACB28-AAD4-4958-9644-8588A8B7915D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_ContactNotes"
+              DTS:DTSID="{F155E209-789F-4B9D-8EE6-E2E370C8EE31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_ContactType"
+              DTS:DTSID="{64E262DE-377B-498E-8E3E-2E14A903EAA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Country"
+              DTS:DTSID="{34C3B1F9-C659-419F-8CA8-820FF2A76F09}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Country2"
+              DTS:DTSID="{AE477515-4436-40E0-AC86-AABA24F9139C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Country3"
+              DTS:DTSID="{0E3F1DF8-95AA-4F7E-ADEE-58A0F9C0E91B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_CreatedBy"
+              DTS:DTSID="{1C19A642-31DE-4B81-BD41-3617400E3444}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_DateCreated"
+              DTS:DTSID="{E874FE29-3F1D-490F-BAB7-077400B85262}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Email"
+              DTS:DTSID="{AA30FC60-8B81-4E1A-9342-2EF07073CD5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_EmailAddress2"
+              DTS:DTSID="{7D3E4D95-4961-48B4-9A9E-61771F713407}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_EmailAddress3"
+              DTS:DTSID="{FF4617CD-492E-4030-8580-BE8A5DD8EBBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Fax1"
+              DTS:DTSID="{716DDE20-2075-4B9D-A2E1-83DE0BD1194A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Fax1Type"
+              DTS:DTSID="{BF61DA65-5661-4822-99EE-BDD2EAE35957}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Fax2"
+              DTS:DTSID="{35D20C10-7DE8-4BCE-A0AE-1A0D3B71EF92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Fax2Type"
+              DTS:DTSID="{A7A943F5-101D-478F-9DDB-ACE45ECB1EB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_FirstName"
+              DTS:DTSID="{99101921-AE83-462A-B175-256958B174D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Groups"
+              DTS:DTSID="{C4484934-4DE6-4D82-95BC-DBB83D99A8D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_JobTitle"
+              DTS:DTSID="{72BB8BBF-9988-401C-BA09-6018145F5359}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Language"
+              DTS:DTSID="{7BEC54A7-2488-4279-9B4F-E02F47913F80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_LastName"
+              DTS:DTSID="{96EF87D2-D78D-47E2-93E4-12C5041DDA9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_LastUpdated"
+              DTS:DTSID="{F80228A8-D4C0-4CBC-8DD0-AB715746B9BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_LastUpdatedBy"
+              DTS:DTSID="{30942B48-043A-47F4-A433-6C8E33F24293}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Leadsource"
+              DTS:DTSID="{2A15D92A-2A0F-4FA9-B4FA-9D229DCEEA86}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_LeadSourceId"
+              DTS:DTSID="{4E88215B-2747-4876-BAC5-D532FF802D5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_MiddleName"
+              DTS:DTSID="{D123D825-C3AB-49E7-A74D-A4D39C2C3465}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Nickname"
+              DTS:DTSID="{C34494D6-AE68-4071-8F11-7CD14857A942}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_OwnerID"
+              DTS:DTSID="{CF99E7BA-2C23-4D34-B9E9-7CBBD3B1B5BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Password"
+              DTS:DTSID="{28B960F0-A748-4A50-BAA8-777E65F3D107}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone1"
+              DTS:DTSID="{7F443017-5EF7-492A-B215-1BC382C30A68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone1Ext"
+              DTS:DTSID="{805C136C-D226-4289-BCE9-632A3922176A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone1Type"
+              DTS:DTSID="{4343007D-C102-461B-A547-B7F96CC93122}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone2"
+              DTS:DTSID="{69B4F6A2-7D73-4A17-A1E8-BD447E63D3DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone2Ext"
+              DTS:DTSID="{4664D795-D030-498D-8A03-6BE748FBD73B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone2Type"
+              DTS:DTSID="{AF5223B9-B87C-4B59-8069-B5B154C859E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone3"
+              DTS:DTSID="{4D010F36-1A59-4155-A59A-21A3C7D63758}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone3Ext"
+              DTS:DTSID="{04E6AB09-8D64-4296-87C9-6D7A3C955F54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone3Type"
+              DTS:DTSID="{1DBF51A8-6F9B-473B-A8BB-9DA52BC7A96C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone4"
+              DTS:DTSID="{3FA613D4-30C9-47AD-BD69-5DBD29B32CF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone4Ext"
+              DTS:DTSID="{4AFB1986-7B85-484C-9033-0D76B0825365}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone4Type"
+              DTS:DTSID="{39BC5F52-0580-433C-99F0-612B423BD2AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone5"
+              DTS:DTSID="{1C18672C-6645-4347-BDF9-BDEAA8C89E0C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone5Ext"
+              DTS:DTSID="{0D385979-7F6C-4098-8E68-D5D379F2EED0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Phone5Type"
+              DTS:DTSID="{CB89434F-7272-4E44-8EB0-D9BD35DAC156}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_PostalCode"
+              DTS:DTSID="{860ABD88-A187-45DC-9B77-937F78DA14F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_PostalCode2"
+              DTS:DTSID="{DE783354-516A-4E8C-A8BA-61952C91BD96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_PostalCode3"
+              DTS:DTSID="{D2AEEF05-7D5C-44EA-8F7E-1BBDF5FA9BD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_ReferralCode"
+              DTS:DTSID="{F8F11A08-7219-4BD2-BF9E-340916D76DC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_SpouseName"
+              DTS:DTSID="{0092A813-2D0B-48EF-A178-355EEBC4B0D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_State"
+              DTS:DTSID="{CD4D5FF6-7112-4EEC-A887-697831DA88EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_State2"
+              DTS:DTSID="{36A295F5-39DF-4270-BA3A-CCE54B0480C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_State3"
+              DTS:DTSID="{51E48499-AA05-4056-8CF2-F2623371921B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_StreetAddress1"
+              DTS:DTSID="{19760269-04D5-4F6C-BA5E-2C1F38BAFFFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_StreetAddress2"
+              DTS:DTSID="{5056DCB1-4D1A-4B82-8CFA-C5AE93395AE3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Suffix"
+              DTS:DTSID="{097171AC-5035-4F92-B708-41FC7522A113}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_TimeZone"
+              DTS:DTSID="{D6E9377F-B076-43C0-8668-3DC2997D93E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Title"
+              DTS:DTSID="{4B3CCAEF-DF93-4153-92AF-429EAE035284}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Username"
+              DTS:DTSID="{07DFD695-7EB1-4464-821F-16513B1821B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Validated"
+              DTS:DTSID="{55398F98-747B-4E29-8B63-9C18C53332FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_Website"
+              DTS:DTSID="{CE31D5AD-35A8-4E09-AEC0-51539D5AA0E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_ZipFour1"
+              DTS:DTSID="{3DDA3970-9702-4E53-8307-6398B32E9BC0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_ZipFour2"
+              DTS:DTSID="{E65B3638-FF25-4E1C-B80F-8E0B2242B528}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="inf_ZipFour3"
+              DTS:DTSID="{FA7F9E97-A351-4B14-BF9D-5D51A844A4FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="infusionsoftid"
+              DTS:DTSID="{0A0956E8-FD70-4C73-BC99-50796D6639E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_synced"
+              DTS:DTSID="{F5680CD7-6426-49E5-AE35-BE4CF0839F79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="modified"
+              DTS:DTSID="{5E57ABE0-E352-47F6-B6C7-27BCD1ED9AE8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="needs_resync"
+              DTS:DTSID="{8C3880D6-2CBF-4DC0-A3BF-DE775A5819AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{EA9FE0E7-6E6B-470F-A11F-AB65E5E1AE0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{09290EA1-88C7-4700-8B51-F69A35913232}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="2048"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorMessage"
+              DTS:DTSID="{D0EF288C-C651-43D6-AD5C-E93924F871BB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Novak ANSI.cj105_dw]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{2459CE77-CF95-4A02-B05C-77E2B925D241}"
+      DTS:ObjectName="Novak ANSI.cj105_dw">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=cj105_dw;Dsn=Novak ANSI;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK/EeDqeuEkixmSZ6QuVUzAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC+itBTbVFsCZCKGyBBnIzNAj/ep1H5TskrnnLrMf+lWwAAAAAOgAAAAAIAACAAAADj1o9LTVuizT+O8vzITbovdGYeeWGk4y+hqr3rA8oEEiAAAAAhNIiVSjWPbbr1fovQHOt7Lv9P4xkb3QN+KYrCMznzGUAAAADzwSZ6hhSH3cIWDsmuygW28aNwI8HNSoXKeF1XqSQYzh3Lpx0jd6FY3FSzCSCa40qEudotr9gtxSFxO/BdL6SN</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[NovakSolutions.cj105_dw]"
+      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{8BD2E344-BDE4-4E29-82B6-24284C35D1BE}"
+      DTS:ObjectName="NovakSolutions.cj105_dw">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=cj105_dw;Dsn=NovakSolutions;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK/EeDqeuEkixmSZ6QuVUzAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACqfhOdwV6dw57R1oQsCJSN9Cn9kw02jAcRhdaRiLB6kgAAAAAOgAAAAAIAACAAAACxThmhXmfecT/g1sVtLKGB1JhyxvUzkfwummhxPTKNoSAAAAC6Owl/VQLkIg0p04qlCYwP4c4uBDqY/qdBoLHF9f6/oUAAAAAqB+fpfLkHewImt9UdumMHmh4H/vOLjrPMEP/IeFzR0E1ir3kH/nPSfq75gDZQV4MJU+uvCh3l3Y6B+60mtfGk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[tsp2.database.windows.net]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{DEDCA5D0-AB58-4F7A-AB1E-4C97240DFE24}"
+      DTS:ObjectName="tsp2.database.windows.net">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=tsp2.database.windows.net;Integrated Security=True;Application Name=SSIS-Package-{DEDCA5D0-AB58-4F7A-AB1E-4C97240DFE24}tsp2.database.windows.net;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[tsp2.database.windows.net 1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{EA28F827-86D6-498B-8F56-31EBE94136A5}"
+      DTS:ObjectName="tsp2.database.windows.net 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=tsp2.database.windows.net;Integrated Security=True;Application Name=SSIS-Package-{EA28F827-86D6-498B-8F56-31EBE94136A5}tsp2.database.windows.net 1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[tsp2.database.windows.net.tsp.tsp2-01]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{7014888E-1E81-4912-929D-2B36D223BA3D}"
+      DTS:ObjectName="tsp2.database.windows.net.tsp.tsp2-01">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=tsp2.database.windows.net;User ID=tsp2-01;Initial Catalog=tsp;Persist Security Info=True;Application Name=SSIS-Package-{7014888E-1E81-4912-929D-2B36D223BA3D}tsp2.database.windows.net.tsp.tsp2-01;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK/EeDqeuEkixmSZ6QuVUzAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADYNtnWRsS5uUEZrTBb/pVGZ6/fs+L9ilduuDnaxRWsCgAAAAAOgAAAAAIAACAAAABhaQlaHe0m7rD7T9+EyW18tk1SEtEsbfi12vab81k0BCAAAADYgpJC70O86cyh7atcwd26SbGrDTT72Rs269tM3QeNXUAAAACUu1VkYyYjAMlLO1nBYFZqCUPjCnarSl4NKoNEsT6JGtr7uMP3HlljiP2KaII1JjHY95QUG2DkkAkpXqyH6bLx</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[{mysql-proxy.novaksolutions.com\}.cj105.cj105_dw]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{7A442D5C-76A2-4D64-9D26-6C250A9F701C}"
+      DTS:ObjectName="{mysql-proxy.novaksolutions.com}.cj105.cj105_dw">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server={mysql-proxy.novaksolutions.com};uid=cj105_dw;Driver={MySQL ODBC 8.0 Unicode Driver};database=cj105;port=3308;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAK/EeDqeuEkixmSZ6QuVUzAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD9MKk2L4gUQXZOTSpJK0T+WSopo+LqYeVtzl1z8IOm4wAAAAAOgAAAAAIAACAAAAAP592bI83zaaIRwnpRGBBV94Yaesp/HqT7LQLroo9g0yAAAAAUsZ02J/w/OESMO/DaX5s/Y3onv5uCkcpReEb6ekACckAAAACnH0a+pYicix6nm8mkh8Mt9fLKtO0zKPorqusMBNIozh5go5jhMSdncF2cqyh7RDPC4/SS4ZrbF5kyOYapKJqU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3777EBA1-04E4-4745-963B-071312849EDB}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="tablename">
+      <DTS:VariableValue
+        DTS:DataType="8">infusionsoft_invoice_payments</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\using ADO (slow)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{8786BE80-0D36-45C9-B552-6563A0C08C36}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="using ADO (slow)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\using ADO (slow)\Premium ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2011-2018 KingswaySoft Inc."
+              description="Insert, Update, Upsert, and Delete data over an ADO.NET connection."
+              name="Premium ADO NET Destination"
+              usesDispositions="true"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.String"
+                  expressionType="Notify"
+                  name="DestinationTable">dbo.infusionsoft_stage_moves</property>
+                <property
+                  dataType="System.Int32"
+                  expressionType="Notify"
+                  name="Action"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.PremiumAdoDotNetDestinationAction">0</property>
+                <property
+                  dataType="System.Boolean"
+                  expressionType="Notify"
+                  name="UseBulkInsert">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="CommandTimeout"
+                  expressionType="Notify"
+                  name="CommandTimeout">1200</property>
+                <property
+                  dataType="System.Int32"
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how to handle duplicates in the temp table before merging. Only applies to non INSERT bulk operations."
+                  expressionType="Notify"
+                  name="DuplicateHandling"
+                  typeConverter="KingswaySoft.IntegrationToolkit.ProductivityPack.PremiumAdoDotNetDestinationDuplicateHandling">0</property>
+                <property
+                  dataType="System.Boolean"
+                  expressionType="Notify"
+                  name="FirstMatchOnly">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Sets 'IDENTITY_INSERT' to 'ON' before inserting and to 'OFF' after inserting."
+                  expressionType="Notify"
+                  name="IdentityInsert">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When enabled, will not overwrite existing values with NULL values during update/upsert operations."
+                  expressionType="Notify"
+                  name="PreventNullOverwrites">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.AdoDotNetDestinationComponent</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\using ADO (slow)\Premium ADO NET Destination.Connections[ADO NET]"
+                  connectionManagerID="Package.ConnectionManagers[tsp2.database.windows.net.tsp.tsp2-01]"
+                  connectionManagerRefId="Package.ConnectionManagers[tsp2.database.windows.net.tsp.tsp2-01]"
+                  description="ADO.NET"
+                  name="ADO NET" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="Primary Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="created"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[created]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[created]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[deleted]"
+                      cachedDataType="i4"
+                      cachedName="deleted"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[deleted]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[deleted]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[id]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_CreatedBy]"
+                      cachedCodepage="65001"
+                      cachedDataType="text"
+                      cachedName="inf_CreatedBy"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_CreatedBy]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_CreatedBy]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_DateCreated]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="inf_DateCreated"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_DateCreated]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_DateCreated]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_MoveDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="inf_MoveDate"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_MoveDate]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveDate]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_MoveFromStage]"
+                      cachedCodepage="65001"
+                      cachedDataType="text"
+                      cachedName="inf_MoveFromStage"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_MoveFromStage]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveFromStage]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_MoveToStage]"
+                      cachedCodepage="65001"
+                      cachedDataType="text"
+                      cachedName="inf_MoveToStage"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_MoveToStage]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveToStage]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_OpportunityId]"
+                      cachedCodepage="65001"
+                      cachedDataType="text"
+                      cachedName="inf_OpportunityId"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_OpportunityId]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_OpportunityId]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_PrevStageMoveDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="inf_PrevStageMoveDate"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_PrevStageMoveDate]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_PrevStageMoveDate]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[inf_UserId]"
+                      cachedCodepage="65001"
+                      cachedDataType="text"
+                      cachedName="inf_UserId"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_UserId]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_UserId]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[infusionsoftid]"
+                      cachedDataType="i4"
+                      cachedName="infusionsoftid"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[infusionsoftid]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[infusionsoftid]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[last_synced]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="last_synced"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[last_synced]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[last_synced]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[modified]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="modified"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[modified]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[modified]" />
+                    <inputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].Columns[needs_resync]"
+                      cachedDataType="i4"
+                      cachedName="needs_resync"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[needs_resync]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[needs_resync]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[created]"
+                      dataType="dbTimeStamp"
+                      name="created">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[deleted]"
+                      dataType="i4"
+                      name="deleted">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">true</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_CreatedBy]"
+                      codePage="1252"
+                      dataType="text"
+                      name="inf_CreatedBy">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_DateCreated]"
+                      dataType="dbTimeStamp"
+                      name="inf_DateCreated">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_MoveDate]"
+                      dataType="dbTimeStamp"
+                      name="inf_MoveDate">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_MoveFromStage]"
+                      codePage="1252"
+                      dataType="text"
+                      name="inf_MoveFromStage">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_MoveToStage]"
+                      codePage="1252"
+                      dataType="text"
+                      name="inf_MoveToStage">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_OpportunityId]"
+                      codePage="1252"
+                      dataType="text"
+                      name="inf_OpportunityId">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_PrevStageMoveDate]"
+                      dataType="dbTimeStamp"
+                      name="inf_PrevStageMoveDate">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[inf_UserId]"
+                      codePage="1252"
+                      dataType="text"
+                      name="inf_UserId">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[infusionsoftid]"
+                      dataType="i4"
+                      name="infusionsoftid">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[last_synced]"
+                      dataType="dbTimeStamp"
+                      name="last_synced">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[modified]"
+                      dataType="dbTimeStamp"
+                      name="modified">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input].ExternalColumns[needs_resync]"
+                      dataType="i4"
+                      name="needs_resync">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsConditionalField">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="IsIdentityField"
+                          name="IsIdentityField">false</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="2048"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\using ADO (slow)\Premium ADO NET Destination.Outputs[Default Output]"
+                  exclusionGroup="1"
+                  name="Default Output"
+                  synchronousInputId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\using ADO (slow)\Premium ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2011-2018 KingswaySoft Inc."
+              description="Read data from an ADO.NET connection."
+              name="Premium ADO NET Source"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  expressionType="Notify"
+                  name="DataSource">infusionsoft_stage_moves</property>
+                <property
+                  dataType="System.String"
+                  expressionType="Notify"
+                  name="Command">SELECT `created`
+      ,`deleted`
+      ,`id`
+      ,`inf_CreatedBy`
+      ,`inf_DateCreated`
+      ,`inf_MoveDate`
+      ,`inf_MoveFromStage`
+      ,`inf_MoveToStage`
+      ,`inf_OpportunityId`
+      ,`inf_PrevStageMoveDate`
+      ,`inf_UserId`
+      ,`infusionsoftid`
+      ,`last_synced`
+      ,`modified`
+      ,`needs_resync`
+FROM `infusionsoft_stage_moves`;</property>
+                <property
+                  dataType="System.Int32"
+                  description="CommandTimeout"
+                  expressionType="Notify"
+                  name="CommandTimeout">1200</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.ProductivityPack.AdoDotNetSourceComponent, KingswaySoft.IntegrationToolkit.ProductivityPack, Version=1.0.2017.0, Culture=neutral, PublicKeyToken=705df8e0751bcea7</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\using ADO (slow)\Premium ADO NET Source.Connections[ADO NET]"
+                  connectionManagerID="Package.ConnectionManagers[NovakSolutions.cj105_dw]"
+                  connectionManagerRefId="Package.ConnectionManagers[NovakSolutions.cj105_dw]"
+                  description="ADO.NET"
+                  name="ADO NET" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output]"
+                  name="Default Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[created]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[created]"
+                      name="created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[deleted]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[deleted]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[deleted]"
+                      name="deleted"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[id]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_CreatedBy]"
+                      codePage="65001"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_CreatedBy]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_CreatedBy]"
+                      name="inf_CreatedBy"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_DateCreated]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_DateCreated]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_DateCreated]"
+                      name="inf_DateCreated"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_MoveDate]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveDate]"
+                      name="inf_MoveDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveFromStage]"
+                      codePage="65001"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_MoveFromStage]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveFromStage]"
+                      name="inf_MoveFromStage"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveToStage]"
+                      codePage="65001"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_MoveToStage]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_MoveToStage]"
+                      name="inf_MoveToStage"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_OpportunityId]"
+                      codePage="65001"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_OpportunityId]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_OpportunityId]"
+                      name="inf_OpportunityId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_PrevStageMoveDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_PrevStageMoveDate]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_PrevStageMoveDate]"
+                      name="inf_PrevStageMoveDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_UserId]"
+                      codePage="65001"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_UserId]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[inf_UserId]"
+                      name="inf_UserId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[infusionsoftid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[infusionsoftid]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[infusionsoftid]"
+                      name="infusionsoftid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[last_synced]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[last_synced]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[last_synced]"
+                      name="last_synced"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[modified]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[modified]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[modified]"
+                      name="modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[needs_resync]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[needs_resync]"
+                      lineageId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].Columns[needs_resync]"
+                      name="needs_resync"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[created]"
+                      dataType="dbTimeStamp"
+                      name="created" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[deleted]"
+                      dataType="i4"
+                      name="deleted" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_CreatedBy]"
+                      codePage="65001"
+                      dataType="text"
+                      name="inf_CreatedBy" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_DateCreated]"
+                      dataType="dbTimeStamp"
+                      name="inf_DateCreated" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_MoveDate]"
+                      dataType="dbTimeStamp"
+                      name="inf_MoveDate" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_MoveFromStage]"
+                      codePage="65001"
+                      dataType="text"
+                      name="inf_MoveFromStage" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_MoveToStage]"
+                      codePage="65001"
+                      dataType="text"
+                      name="inf_MoveToStage" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_OpportunityId]"
+                      codePage="65001"
+                      dataType="text"
+                      name="inf_OpportunityId" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_PrevStageMoveDate]"
+                      dataType="dbTimeStamp"
+                      name="inf_PrevStageMoveDate" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[inf_UserId]"
+                      codePage="65001"
+                      dataType="text"
+                      name="inf_UserId" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[infusionsoftid]"
+                      dataType="i4"
+                      name="infusionsoftid" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[last_synced]"
+                      dataType="dbTimeStamp"
+                      name="last_synced" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[modified]"
+                      dataType="dbTimeStamp"
+                      name="modified" />
+                    <externalMetadataColumn
+                      refId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output].ExternalColumns[needs_resync]"
+                      dataType="i4"
+                      name="needs_resync" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\using ADO (slow).Paths[Default Output]"
+              endId="Package\using ADO (slow)\Premium ADO NET Destination.Inputs[Primary Input]"
+              name="Default Output"
+              startId="Package\using ADO (slow)\Premium ADO NET Source.Outputs[Default Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Using ODBC (fast)"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{27EAE92F-EFCF-4D5E-A3B5-AD310B948641}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Using ODBC (fast)"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Using ODBC (fast)\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."infusionsoft_invoice_payments"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Using ODBC (fast)\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[tsp2.database.windows.net.tsp.tsp2-01]"
+                  connectionManagerRefId="Package.ConnectionManagers[tsp2.database.windows.net.tsp.tsp2-01]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[id]"
+                      cachedDataType="i4"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[infusionsoftid]"
+                      cachedDataType="i4"
+                      cachedName="infusionsoftid"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[infusionsoftid]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[infusionsoftid]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[last_synced]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="last_synced"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[last_synced]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[last_synced]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[needs_resync]"
+                      cachedDataType="i4"
+                      cachedName="needs_resync"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[needs_resync]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[needs_resync]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[created]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="created"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[created]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[created]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[modified]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="modified"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[modified]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[modified]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[inf_InvoiceId]"
+                      cachedDataType="i4"
+                      cachedName="inf_InvoiceId"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_InvoiceId]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_InvoiceId]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[inf_Amt]"
+                      cachedDataType="r8"
+                      cachedName="inf_Amt"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_Amt]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_Amt]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[inf_PayDate]"
+                      cachedDataType="dbDate"
+                      cachedName="inf_PayDate"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_PayDate]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PayDate]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[inf_PayStatus]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="inf_PayStatus"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_PayStatus]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PayStatus]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[inf_PaymentId]"
+                      cachedDataType="i4"
+                      cachedName="inf_PaymentId"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_PaymentId]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PaymentId]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[inf_SkipCommission]"
+                      cachedDataType="i4"
+                      cachedName="inf_SkipCommission"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_SkipCommission]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_SkipCommission]" />
+                    <inputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[deleted]"
+                      cachedDataType="i4"
+                      cachedName="deleted"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[deleted]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[deleted]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[infusionsoftid]"
+                      dataType="i4"
+                      name="infusionsoftid" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[last_synced]"
+                      dataType="dbTimeStamp"
+                      name="last_synced" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[needs_resync]"
+                      dataType="i4"
+                      name="needs_resync" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[created]"
+                      dataType="dbTimeStamp"
+                      name="created" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[modified]"
+                      dataType="dbTimeStamp"
+                      name="modified" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_InvoiceId]"
+                      dataType="i4"
+                      name="inf_InvoiceId" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_Amt]"
+                      dataType="numeric"
+                      name="inf_Amt"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_PayDate]"
+                      dataType="dbTimeStamp"
+                      name="inf_PayDate" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_PayStatus]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="inf_PayStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_PaymentId]"
+                      dataType="i4"
+                      name="inf_PaymentId" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[inf_SkipCommission]"
+                      dataType="i4"
+                      name="inf_SkipCommission" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[deleted]"
+                      dataType="i4"
+                      name="deleted" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Using ODBC (fast)\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using ODBC (fast)\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using ODBC (fast)\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Using ODBC (fast)\ODBC Source"
+              componentClassID="Attunity.SSISODBCSrc"
+              contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;7"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">`infusionsoft_invoice_payments`</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod"
+                  typeConverter="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs"
+                  typeConverter="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs"
+                  typeConverter="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Using ODBC (fast)\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Novak ANSI.cj105_dw]"
+                  connectionManagerRefId="Package.ConnectionManagers[Novak ANSI.cj105_dw]"
+                  description="The ODBC runtime connection"
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[id]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[id]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[infusionsoftid]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[infusionsoftid]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[infusionsoftid]"
+                      name="infusionsoftid" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[last_synced]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_synced]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[last_synced]"
+                      name="last_synced" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[needs_resync]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[needs_resync]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[needs_resync]"
+                      name="needs_resync" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[created]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[created]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[created]"
+                      name="created" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[modified]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[modified]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[modified]"
+                      name="modified" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_InvoiceId]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_InvoiceId]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_InvoiceId]"
+                      name="inf_InvoiceId" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_Amt]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_Amt]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_Amt]"
+                      name="inf_Amt" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PayDate]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PayDate]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PayDate]"
+                      name="inf_PayDate" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PayStatus]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PayStatus]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PayStatus]"
+                      name="inf_PayStatus" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PaymentId]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PaymentId]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_PaymentId]"
+                      name="inf_PaymentId" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_SkipCommission]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_SkipCommission]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[inf_SkipCommission]"
+                      name="inf_SkipCommission" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[deleted]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[deleted]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].Columns[deleted]"
+                      name="deleted" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[infusionsoftid]"
+                      dataType="i4"
+                      name="infusionsoftid" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_synced]"
+                      dataType="dbTimeStamp"
+                      name="last_synced" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[needs_resync]"
+                      dataType="i4"
+                      name="needs_resync" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[created]"
+                      dataType="dbTimeStamp"
+                      name="created" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[modified]"
+                      dataType="dbTimeStamp"
+                      name="modified" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_InvoiceId]"
+                      dataType="i4"
+                      name="inf_InvoiceId" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_Amt]"
+                      dataType="r8"
+                      name="inf_Amt" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PayDate]"
+                      dataType="dbDate"
+                      name="inf_PayDate" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PayStatus]"
+                      codePage="1252"
+                      dataType="text"
+                      name="inf_PayStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PaymentId]"
+                      dataType="i4"
+                      name="inf_PaymentId" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_SkipCommission]"
+                      dataType="i4"
+                      name="inf_SkipCommission" />
+                    <externalMetadataColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[deleted]"
+                      dataType="i4"
+                      name="deleted" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[id]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[id]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[infusionsoftid]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[infusionsoftid]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[infusionsoftid]"
+                      name="infusionsoftid" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[last_synced]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[last_synced]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[last_synced]"
+                      name="last_synced" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[needs_resync]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[needs_resync]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[needs_resync]"
+                      name="needs_resync" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[created]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[created]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[created]"
+                      name="created" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[modified]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[modified]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[modified]"
+                      name="modified" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_InvoiceId]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_InvoiceId]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_InvoiceId]"
+                      name="inf_InvoiceId" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_Amt]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_Amt]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_Amt]"
+                      name="inf_Amt" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_PayDate]"
+                      dataType="dbDate"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PayDate]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_PayDate]"
+                      name="inf_PayDate" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_PayStatus]"
+                      codePage="1252"
+                      dataType="text"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PayStatus]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_PayStatus]"
+                      name="inf_PayStatus" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_PaymentId]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_PaymentId]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_PaymentId]"
+                      name="inf_PaymentId" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_SkipCommission]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[inf_SkipCommission]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[inf_SkipCommission]"
+                      name="inf_SkipCommission" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[deleted]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[deleted]"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[deleted]"
+                      name="deleted" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Using ODBC (fast).Paths[ODBC Source Output]"
+              endId="Package\Using ODBC (fast)\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="ODBC Source Output"
+              startId="Package\Using ODBC (fast)\ODBC Source.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="161,42"
+          Id="Package\using ADO (slow)"
+          TopLeft="38.25,20.75" />
+        <NodeLayout
+          Size="164.5,42"
+          Id="Package\Using ODBC (fast)"
+          TopLeft="86.5833333333333,108.916666666667" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\using ADO (slow)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="203,42"
+          Id="Package\using ADO (slow)\Premium ADO NET Source"
+          TopLeft="80,43.5" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\using ADO (slow)\Premium ADO NET Destination"
+          TopLeft="181.5,141" />
+        <EdgeLayout
+          Id="Package\using ADO (slow).Paths[Default Output]"
+          TopLeft="181.5,85.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="112,55.5"
+              Start="0,0"
+              End="112,48">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.75"
+                    Point2="0,27.75"
+                    Point3="4,27.75" />
+                  <mssgle:LineSegment
+                    End="108,27.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="108,27.75"
+                    Point2="112,27.75"
+                    Point3="112,31.75" />
+                  <mssgle:LineSegment
+                    End="112,48" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Using ODBC (fast)">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Using ODBC (fast)\ODBC Source"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Using ODBC (fast)\ADO NET Destination"
+          TopLeft="149,119.5" />
+        <EdgeLayout
+          Id="Package\Using ODBC (fast).Paths[ODBC Source Output]"
+          TopLeft="76.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="162,72"
+              Start="0,0"
+              End="162,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
+                  <mssgle:LineSegment
+                    End="158,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="158,36"
+                    Point2="162,36"
+                    Point3="162,40" />
+                  <mssgle:LineSegment
+                    End="162,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Using ODBC (fast)\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Using ODBC (fast)\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

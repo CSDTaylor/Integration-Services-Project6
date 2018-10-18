@@ -1,0 +1,6 @@
+﻿SSIS package "C:\Users\User1\source\repos\Integration Services Project6\Integration Services Project6\ImportFromNovak.dtsx" starting.
+Information: 0x4004300A at Data Flow Task, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at Data Flow Task, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at Data Flow Task, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at Data Flow Task, SSIS.Pipeline: Pre-Execute phase is beginning.
+The program '[4192] DtsDebugHost.exe: DTS' has exited with code 0 (0x0).
